@@ -1,0 +1,12 @@
+# Local .terraform directories
+**/.terraform/*
+
+.env
+venv/
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# generated data
+generated

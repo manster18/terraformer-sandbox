@@ -1,0 +1,17 @@
+version: '3'
+services:
+  my_aws_terraformer:
+    env_file:
+      - .env
+    build:
+      args:
+        - TF_VERSION=${TF_VERSION}
+        - TFER_VERSION=${TFER_VERSION}
+        - PROVIDER=${PROVIDER}
+      dockerfile: ./Dockerfile
+    volumes:
+      - ${TFER_DIR}:/home/terraformer:consistent
+    stdin_open: true
+    tty: true
+    command: [ "/bin/bash" ]
+    container_name: my_aws_terraformer
