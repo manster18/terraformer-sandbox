@@ -36,5 +36,5 @@ WORKDIR /home/terraformer/data
 
 
 # docker build --build-arg TF_VERSION=1.0.11 --build-arg TFER_VERSION=0.8.18 --build-arg PROVIDER=aws --build-arg AWS_SECRET_ACCESS_KEY=*** --build-arg AWS_ACCESS_KEY_ID=*** --build-arg AWS_REGION=eu-west-1 -t my_aws_terraformer .
-# docker volume create --name my_aws_terraformer_volume --opt type=none --opt device=/Users/andadmin/Documents/git/andersen_repos/aer_temp/terraformer --opt o=bind
+# docker volume create --name my_aws_terraformer_volume --opt type=none --opt device=/your/path/to/data --opt o=bind
 # docker run --rm --name my_aws_terraformer_container --mount source=my_aws_terraformer_volume,target=/home/terraformer -ti my_aws_terraformer /bin/bash
